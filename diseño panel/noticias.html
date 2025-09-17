@@ -1,0 +1,551 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Superadmin · Noticias</title><link rel="stylesheet" href="../assets/styles.css"/></head>
+
+
+
+<body class="theme-super">
+  <input type="checkbox" id="nav-toggle"/>
+  <label class="toggle btn" for="nav-toggle" title="Abrir menú">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  Menú
+</label>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">
+      <div class="logo"></div>
+      <h1>Superadmin</h1>
+  </div>
+  <div class="group">
+      <div class="head">Principal</div>
+      <nav class="nav">
+      <a class="" href="index.html">
+        <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9v8a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2v-8Z"/>
+        </svg>Inicio
+      </a>
+      </nav>
+  </div>
+  <div class="group">
+      <div class="head">Contenido</div>
+      <nav class="nav">
+        <a class="active" href="noticias.html">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Noticias</a>
+        <a class="" href="eventos.html">
+          <svg viewBox="0 0 24 24"><path d="M8 7h8M6 11h12M4 15h16M7 3v2M17 3v2"/></svg>Eventos</a>
+      <a class="" href="convocatorias.html">
+        <svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="10" rx="2"/><path d="M9 19h6"/></svg>Convocatorias</a>
+      <a class="" href="coordinaciones.html">
+      <svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="3"/>
+        <path d="M2 21c0-4 3-7 7-7"/><circle cx="17" cy="7" r="3"/>
+        <path d="M22 21c0-4-3-7-7-7"/>
+      </svg>Coordinaciones</a>
+      <a class="" href="mediateca.html">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/>
+        </svg>Mediateca</a>
+      </nav>
+    </div>
+  <div class="group">
+    <div class="head">Gestión</div>
+    <nav class="nav">
+    <a class="" href="usuarios.html">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="7" r="4"/>
+        <path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>
+      </svg>Usuarios y Roles</a>
+    <a class="" href="estadisticas.html">
+      <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M9 17V9m4 8V5m4 12v-6"/>
+      </svg>Estadísticas</a>
+    <a class="" href="configuracion.html">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.6 1.6 0 0 1 .32 1.76l-.1.2a9 9 0 0 1-1.3 1.7l.2 1.2a1.6 1.6 0 0 1-1.56 1.86h-.22l-1.2-.2a9 9 0 0 1-1.7 1.3l-.2.1A1.6 1.6 0 0 1 11 23a1.6 1.6 0 0 1-1.76-.32l-.2-.1a9 9 0 0 1-1.7-1.3l-1.2.2A1.6 1.6 0 0 1 3 20.44v-.22l.2-1.2a8.9 8.9 0 0 1 1.3-1.7l-.1-.2A1.6 1.6 0 0 1 2 15c0-.34.12-.67.32-.94l.1-.2a8.9 8.9 0 0 1 1.3-1.7L3.5 8.1A1.6 1.6 0 0 1 5.06 6.5h.22l1.2.2a9 9 0 0 1 1.7-1.3l.2-.1A1.6 1.6 0 0 1 9 2a1.6 1.6 0 0 1 1.76.32l.2.1a9 9 0 0 1 1.7 1.3l1.2-.2a1.6 1.6 0 0 1 1.86 1.56v.22l-.2 1.2a8.9 8.9 0 0 1 1.3 1.7l.1.2c.2.27.32.6.32.94Z"/></svg>Configuración</a>
+      </nav>
+  </div>
+</aside>
+
+<main class="main">
+    <div class="topbar">
+      <a class="btn ghost" href="#" title="Atajos">
+        <!-- <span class="kbd">⌘</span>
+        <span class="kbd">K</span> -->
+      </a>
+    <div style="margin-left:auto"></div>
+        <!-- <a class="btn" href="#">Sincronizar</a>
+        <a class="btn primary" href="#new">Nuevo</a> -->
+      <div class="user"><span class="small muted">usuario@sistema.mx</span>
+        <div class="avatar" title="Perfil"></div>
+      </div>
+    </div>
+
+    <section>
+    <div class="breadcrumbs">Inicio / Noticias</div>
+    <div class="section-head">
+        <h2 class="section">Noticias</h2>
+      <div class="section-actions">
+        <a class="btn primary" href="#crear-noticia">Crear noticia</a>
+      </div>
+    </div>
+
+
+
+<!-- ===== Noticias (sección propia) ===== -->
+<!-- ===== Noticias recientes en cards ===== -->
+<section class="news-cards" id="lista-noticias">
+  <header>
+    <strong>Noticias recientes</strong>
+    <!-- <a class="btn" href="#">Exportar</a> -->
+  </header>
+
+  <div class="nc-grid">
+    <!-- ========= Card 1 ========= -->
+    <article class="nc-card" id="n-1023">
+      <div class="nc-cover" style="--cover:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop');">
+        <span class="nc-state st-pub">Publicado</span>
+      </div>
+
+      <div class="nc-body">
+        <h3 class="nc-title">Jornada Académica 2025</h3>
+        <p class="nc-summary">Ponencias de investigación y participación docente. Actividades en el Auditorio A.</p>
+
+        <div class="nc-meta">
+          <span>📅 11/09/2025</span>
+          <span>📂 Desarrollo Académico</span>
+          <span>🏷️ investigación, jornadas</span>
+        </div>
+      </div>
+
+      <div class="nc-actions">
+        <a class="btn small" href="#edit-n1023">Editar</a>
+        <a class="btn small ghost" href="#">Ver</a>
+        <a class="btn small warn" href="#">Eliminar</a>
+      </div>
+    </article>
+
+    <!-- ========= Card 2 ========= -->
+    <article class="nc-card" id="n-1024">
+      <div class="nc-cover" style="--cover:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
+        <span class="nc-state st-rev">En revisión</span>
+      </div>
+
+      <div class="nc-body">
+        <h3 class="nc-title">Convocatoria de Tutorías 2025-B</h3>
+        <p class="nc-summary">Invitación a docentes para integrarse como tutores académicos del periodo 2025-B.</p>
+
+        <div class="nc-meta">
+          <span>📅 02/10/2025</span>
+          <span>📂 Tutorías</span>
+          <span>🏷️ convocatoria, tutorías</span>
+        </div>
+      </div>
+
+      <div class="nc-actions">
+        <a class="btn small" href="#edit-n1024">Editar</a>
+        <a class="btn small ghost" href="#">Ver</a>
+        <a class="btn small warn" href="#">Eliminar</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ====== MODALES DE EDICIÓN (uno por card) ====== -->
+
+<!-- Editar N-1023 -->
+<div class="pn-modal" id="edit-n1023" role="dialog" aria-modal="true">
+  <div class="pn-sheet">
+    <header>
+      <strong>Editar noticia — N-1023</strong>
+      <a class="pn-close" href="#" aria-label="Cerrar">✕</a>
+    </header>
+
+    <div class="pn-body">
+      <div class="pn-tabs">
+        <div class="pn-tabs-head">
+          <label for="ntab-1-1023">Datos</label>
+          <label for="ntab-2-1023">Medios</label>
+        </div>
+        <input type="radio" name="tabs-1023" id="ntab-1-1023" checked>
+        <input type="radio" name="tabs-1023" id="ntab-2-1023">
+
+        <div class="pn-panels">
+          <!-- Panel Datos -->
+          <div class="pn-panel" id="npanel-1-1023">
+            <form class="pn-form" action="#" method="get">
+              <div class="pn-row">
+                <div>
+                  <label class="req">Título</label>
+                  <input type="text" required value="Jornada Académica 2025">
+                  <div class="pn-msg">Requerido.</div>
+                </div>
+                <div>
+                  <label>Slug</label>
+                  <input type="text" value="jornada-academica-2025">
+                </div>
+              </div>
+
+              <div class="pn-row">
+                <div>
+                  <label class="req">Resumen</label>
+                  <input type="text" required value="Ponencias de investigación y participación docente.">
+                  <div class="pn-msg">Requerido.</div>
+                </div>
+                <div>
+                  <label class="req">Estado</label>
+                  <select required>
+                    <option>En revisión</option>
+                    <option selected>Publicado</option>
+                    <option>Borrador</option>
+                  </select>
+                  <div class="pn-msg">Selecciona un estado.</div>
+                </div>
+              </div>
+
+              <div>
+                <label class="req">Contenido</label>
+                <textarea required>Descripción extendida de la jornada académica…</textarea>
+                <div class="pn-msg">Requerido.</div>
+              </div>
+
+              <div class="pn-row">
+                <div>
+                  <label>Categorías / Etiquetas</label>
+                  <input type="text" value="investigación, jornadas">
+                </div>
+                <div>
+                  <label>Coordinación</label>
+                  <select>
+                    <option>Investigación</option>
+                    <option>Desarrollo Académico</option>
+                    <option>Tutorías</option>
+                    <option>Titulación</option>
+                    <option>Vinculación</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pn-actions">
+                <a class="btn" href="#">Guardar borrador</a>
+                <button class="btn primary" type="submit">Guardar cambios</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Panel Medios -->
+          <div class="pn-panel" id="npanel-2-1023">
+            <form class="pn-form" action="#" method="get" enctype="multipart/form-data">
+              <div class="pn-row">
+                <div>
+                  <label>Imagen portada</label>
+                  <input type="file" accept="image/*">
+                </div>
+                <div>
+                  <label>Galería</label>
+                  <input type="file" accept="image/*" multiple>
+                </div>
+              </div>
+
+              <fieldset class="pn-fieldset">
+                <legend>Accesibilidad</legend>
+                <div class="pn-row">
+                  <div>
+                    <label>Texto alternativo</label>
+                    <input type="text" value="Ponente principal en el escenario">
+                  </div>
+                  <div>
+                    <label>Créditos</label>
+                    <input type="text" value="Foto: Comunicación ITM">
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="pn-actions">
+                <a class="btn" href="#">Previsualizar</a>
+                <button class="btn primary" type="submit">Guardar cambios</button>
+              </div>
+            </form>
+          </div>
+        </div> <!-- /pn-panels -->
+      </div> <!-- /pn-tabs -->
+    </div>
+  </div>
+</div>
+
+<!-- Editar N-1024 -->
+<div class="pn-modal" id="edit-n1024" role="dialog" aria-modal="true">
+  <div class="pn-sheet">
+    <header>
+      <strong>Editar noticia — N-1024</strong>
+      <a class="pn-close" href="#" aria-label="Cerrar">✕</a>
+    </header>
+
+    <div class="pn-body">
+      <div class="pn-tabs">
+        <div class="pn-tabs-head">
+          <label for="ntab-1-1024">Datos</label>
+          <label for="ntab-2-1024">Medios</label>
+        </div>
+        <input type="radio" name="tabs-1024" id="ntab-1-1024" checked>
+        <input type="radio" name="tabs-1024" id="ntab-2-1024">
+
+        <div class="pn-panels">
+          <div class="pn-panel" id="npanel-1-1024">
+            <form class="pn-form" action="#" method="get">
+              <div class="pn-row">
+                <div>
+                  <label class="req">Título</label>
+                  <input type="text" required value="Convocatoria de Tutorías 2025-B">
+                  <div class="pn-msg">Requerido.</div>
+                </div>
+                <div>
+                  <label>Slug</label>
+                  <input type="text" value="convocatoria-tutorias-2025-b">
+                </div>
+              </div>
+
+              <div class="pn-row">
+                <div>
+                  <label class="req">Resumen</label>
+                  <input type="text" required value="Invitación a docentes para integrarse como tutores.">
+                  <div class="pn-msg">Requerido.</div>
+                </div>
+                <div>
+                  <label class="req">Estado</label>
+                  <select required>
+                    <option selected>En revisión</option>
+                    <option>Publicado</option>
+                    <option>Borrador</option>
+                  </select>
+                  <div class="pn-msg">Selecciona un estado.</div>
+                </div>
+              </div>
+
+              <div>
+                <label class="req">Contenido</label>
+                <textarea required>Bases de participación y requisitos…</textarea>
+                <div class="pn-msg">Requerido.</div>
+              </div>
+
+              <div class="pn-row">
+                <div>
+                  <label>Categorías / Etiquetas</label>
+                  <input type="text" value="convocatoria, tutorías">
+                </div>
+                <div>
+                  <label>Coordinación</label>
+                  <select>
+                    <option>Tutorías</option>
+                    <option>Investigación</option>
+                    <option>Desarrollo Académico</option>
+                    <option>Titulación</option>
+                    <option>Vinculación</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pn-actions">
+                <a class="btn" href="#">Guardar borrador</a>
+                <button class="btn primary" type="submit">Guardar cambios</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="pn-panel" id="npanel-2-1024">
+            <form class="pn-form" action="#" method="get" enctype="multipart/form-data">
+              <div class="pn-row">
+                <div>
+                  <label>Imagen portada</label>
+                  <input type="file" accept="image/*">
+                </div>
+                <div>
+                  <label>Galería</label>
+                  <input type="file" accept="image/*" multiple>
+                </div>
+              </div>
+
+              <fieldset class="pn-fieldset">
+                <legend>Accesibilidad</legend>
+                <div class="pn-row">
+                  <div>
+                    <label>Texto alternativo</label>
+                    <input type="text" placeholder="Describe la portada">
+                  </div>
+                  <div>
+                    <label>Créditos</label>
+                    <input type="text" placeholder="Autor / Fuente">
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="pn-actions">
+                <a class="btn" href="#">Previsualizar</a>
+                <button class="btn primary" type="submit">Guardar cambios</button>
+              </div>
+            </form>
+          </div>
+        </div><!-- /pn-panels -->
+      </div><!-- /pn-tabs -->
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- ===== Modal: Crear noticia ===== -->
+<div class="modal-noticias" id="crear-noticia" role="dialog" aria-modal="true">
+  <div class="sheet-noticia">
+    <header class="mn-header">
+      <strong>Crear noticia</strong>
+      <a class="mn-close" href="#" aria-label="Cerrar">✕</a>
+    </header>
+
+    <div class="mn-body">
+      <!-- Tabs (CSS-only) -->
+      <div class="tabs-noticia">
+        <div class="tn-head">
+          <label for="n-tab1">Datos</label>
+          <label for="n-tab2">Medios</label>
+        </div>
+        <input type="radio" name="n-tabs" id="n-tab1" checked>
+        <input type="radio" name="n-tabs" id="n-tab2">
+
+        <div class="tn-panels">
+          <!-- Panel 1: Datos -->
+          <div class="tn-panel" id="n-p1">
+            <form class="n-form" action="#" method="get">
+              <div class="n-row">
+                <div>
+                  <label class="req">Título</label>
+                  <input type="text" required placeholder="Ej. Jornada académica 2025">
+                  <div class="n-msg">El título es obligatorio.</div>
+                </div>
+                <div>
+                  <label>Slug</label>
+                  <input type="text" placeholder="jornada-academica-2025">
+                </div>
+              </div>
+
+              <div class="n-row">
+                <div>
+                  <label class="req">Resumen</label>
+                  <input type="text" required placeholder="Resumen corto">
+                  <div class="n-msg">Agrega un resumen.</div>
+                </div>
+                <div>
+                  <label class="req">Estado</label>
+                  <select required>
+                    <option value="">Selecciona…</option>
+                    <option>Borrador</option>
+                    <option>En revisión</option>
+                    <option>Publicado</option>
+                  </select>
+                  <div class="n-msg">Selecciona un estado.</div>
+                </div>
+              </div>
+
+              <div>
+                <label class="req">Contenido</label>
+                <textarea required placeholder="Cuerpo de la noticia…"></textarea>
+                <div class="n-msg">El contenido es obligatorio.</div>
+              </div>
+
+              <div class="n-row">
+                <div>
+                  <label>Categorías / Etiquetas</label>
+                  <input type="text" placeholder="investigación, vinculación">
+                </div>
+                <div>
+                  <label>Coordinación</label>
+                  <select>
+                    <option>Investigación</option>
+                    <option>Titulación</option>
+                    <option>Tutorías</option>
+                    <option>Desarrollo Académico</option>
+                    <option>Vinculación</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="n-actions">
+                <a class="btn" href="#">Cancelar</a>
+                <a class="btn primary" href="#confirmar-noticia">Publicar</a>
+              </div>
+            </form>
+          </div>
+
+          <!-- Panel 2: Medios -->
+          <div class="tn-panel" id="n-p2">
+            <form class="n-form" action="#" method="get" enctype="multipart/form-data">
+              <div class="n-row">
+                <div>
+                  <label class="req">Imagen portada</label>
+                  <input type="file" accept="image/*" required>
+                  <div class="n-msg">Sube una portada.</div>
+                </div>
+                <div>
+                  <label>Galería</label>
+                  <input type="file" accept="image/*" multiple>
+                </div>
+              </div>
+
+              <fieldset class="n-fieldset">
+                <legend>Accesibilidad</legend>
+                <div class="n-row">
+                  <div>
+                    <label>Texto alternativo</label>
+                    <input type="text" placeholder="Describe la imagen">
+                  </div>
+                  <div>
+                    <label>Créditos</label>
+                    <input type="text" placeholder="Autor / Fuente">
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- <div class="n-actions">
+                <a class="btn" href="#preview-noticia">Previsualizar</a>
+              </div> -->
+            </form>
+          </div>
+        </div> <!-- /tn-panels -->
+      </div> <!-- /tabs-noticia -->
+    </div> <!-- /mn-body -->
+  </div>
+</div>
+
+<!-- Modal: confirmación publicar -->
+<div class="modal-noticias" id="confirmar-noticia" role="dialog" aria-modal="true">
+  <div class="sheet-noticia">
+    <header class="mn-header">
+      <strong>Publicar noticia</strong>
+      <a class="mn-close" href="#" aria-label="Cerrar">✕</a>
+    </header>
+    <div class="mn-body">
+      <p>¿Confirmas la publicación de esta noticia?</p>
+      <div class="n-actions">
+        <a class="btn" href="#">Cancelar</a>
+        <a class="btn primary" href="#">Aceptar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: previsualización -->
+<div class="modal-noticias" id="preview-noticia" role="dialog" aria-modal="true">
+  <div class="sheet-noticia">
+    <header class="mn-header">
+      <strong>Previsualización</strong>
+      <a class="mn-close" href="#" aria-label="Cerrar">✕</a>
+    </header>
+    <div class="mn-body">
+      <p>Así se vería la noticia (maqueta).</p>
+      <div class="n-actions">
+        <a class="btn" href="#">Cerrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+</se>
+</main>
+</div>
+</body>
+</html>
