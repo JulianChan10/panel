@@ -1,10 +1,13 @@
 
 /* ===== Base Vars ===== */
 :root{
-  --bg:#0b1320; --panel:#111a2b; --muted:#74809a; --text:#e8edf7;
+  /* --bg:#0b1320; --panel:#111a2b; --muted:#74809a; --text:#e8edf7; */
   --primary:#5b8cff; --primary-2:#3b6eff; --accent:#22d3ee;
   --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
-  --border:#22304a; --card:#0f1730; --radius:16px; --shadow:0 8px 20px rgba(0,0,0,.25);
+  --border:#ffffff; 
+  /* --card:#0f1730;  */
+  --radius:16px; 
+  --shadow:0 8px 20px rgba(0,0,0,.15);
   --ring:0 0 0 3px #5b8cff33;
 }
 @media (prefers-color-scheme: light){
