@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Docente · Eventos</title><link rel="stylesheet" href="../assets/styles.css"/></head>
+<body class="theme-docente">
+<input type="checkbox" id="nav-toggle"/>
+<label class="toggle btn" for="nav-toggle" title="Abrir menú">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  Menú
+</label>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo"></div><h1>Docente</h1></div>
+  <div class="group"><div class="head">Contenido</div><nav class="nav">
+    <a class="" href="index.html"><svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9v8a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2v-8Z"/></svg>Inicio</a>
+    <a class="" href="noticias.html"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Noticias</a>
+    <a class="active" href="eventos.html"><svg viewBox="0 0 24 24"><path d="M8 7h8M6 11h12M4 15h16M7 3v2M17 3v2"/></svg>Eventos</a>
+    <a class="" href="convocatorias.html"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="10" rx="2"/><path d="M9 19h6"/></svg>Convocatorias</a>
+    <a class="" href="mediateca.html"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/></svg>Mediateca</a>
+  </nav></div>
+  <div class="group"><div class="head">Seguimiento</div><nav class="nav">
+    <a class="" href="estadisticas.html"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M9 17V9m4 8V5m4 12v-6"/></svg>Estadísticas</a>
+    <a class="" href="perfil.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>Perfil</a>
+  </nav></div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <a class="btn ghost" href="#" title="Atajos"><span class="kbd">⌘</span><span class="kbd">K</span></a>
+    <div style="margin-left:auto"></div>
+    <a class="btn" href="#">Sincronizar</a>
+    <a class="btn primary" href="#new">Nuevo</a>
+    <div class="user"><span class="small muted">usuario@sistema.mx</span><div class="avatar" title="Perfil"></div></div>
+  </div>
+
+<section class="content"><div class="breadcrumbs">Inicio / Eventos</div><h2 class='section'>Crear evento</h2><div class='grid'><section class='panel'><header><strong>Configuración</strong></header><div class='body' style='padding:14px'><div class="tabs"><div class="tab-head"><label for="t1">Datos</label><label for="t2">Logística</label><label for="t3">Material</label></div><input type="radio" name="tabs" id="t1" checked />
+<input type="radio" name="tabs" id="t2"  />
+<input type="radio" name="tabs" id="t3"  /><div class="tab-panels"><div class="tab-panel" id="p1">
+<form class="form">
+  <div class="row">
+    <div><label class="req">Título</label><input required type="text" placeholder="Foro de Investigación"><div class="msg error">Campo requerido.</div></div>
+    <div><label class="req">Estado</label><select required><option value="">Selecciona…</option><option>Programado</option><option>En revisión</option><option>Cancelado</option></select><div class="msg error">Selecciona un estado.</div></div>
+  </div>
+  <div class="row">
+    <div><label class="req">Inicio</label><input required type="date"><div class="msg error">Requerido.</div></div>
+    <div><label class="req">Fin</label><input required type="date"><div class="msg error">Requerido.</div></div>
+  </div>
+  <div class="row">
+    <div><label>Hora</label><input type="text" placeholder="09:00 - 14:00"></div>
+    <div><label>Modalidad</label><select><option>Presencial</option><option>Virtual</option><option>Mixta</option></select></div>
+  </div>
+  <div class="actions"><a class="btn" href="#">Guardar</a><a class="btn primary" href="#confirm-evento">Publicar</a></div>
+</form>
+</div><div class="tab-panel" id="p2">
+<form class="form">
+  <div class="row">
+    <div><label class="req">Lugar</label><input required type="text" placeholder="Auditorio A / Zoom"><div class="msg error">Campo requerido.</div></div>
+    <div><label>Aforo estimado</label><input type="number" min="0" placeholder="100"></div>
+  </div>
+  <div class="row">
+    <div><label>Registro (URL)</label><input type="text" placeholder="https://..."></div>
+    <div><label>Coordinación</label><select disabled><option>Investigación</option><option>Titulación</option><option>Tutorías</option><option>Desarrollo Académico</option><option>Vinculación</option></select>
+    <div class='help'>* Coordinación fija.</div></div>
+  </div>
+</form>
+</div><div class="tab-panel" id="p3">
+<form class="form">
+  <div class="row">
+    <div><label>Póster</label><input type="file" accept="image/*"></div>
+    <div><label>Programa (PDF)</label><input type="file" accept="application/pdf"></div>
+  </div>
+  <fieldset><legend>Speakers</legend>
+    <div class="row"><div><label>Nombre</label><input type="text" placeholder="Ponente 1"></div><div><label>Institución</label><input type="text" placeholder="ITM"></div></div>
+  </fieldset>
+  <div class="actions"><a class="btn" href="#preview-evento">Previsualizar</a></div>
+</form>
+</div></div></div></div></section>
+<section class="table"><header><strong>Próximos eventos</strong><a class="btn" href="#">Exportar</a></header>
+<table><thead><tr><th>ID</th><th>Título</th><th>Inicio</th><th>Fin</th><th>Aforo</th><th>Estado</th></tr></thead>
+<tbody><tr><td>E-047</td><td>Taller de Titulación</td><td>15/09/2025</td><td>15/09/2025</td><td>100</td><td><span class='badge'>Programado</span></td></tr></tbody></table></section>
+</div>
+<div class="modal" id="confirm-evento">
+  <div class="sheet">
+    <header><strong>Publicar evento</strong><a class="close" href="#" aria-label="Cerrar">✕</a></header>
+    <div class="body"><p>¿Confirmas la publicación del evento?</p>
+      <div class="actions">
+        <a class="btn" href="#">Cancelar</a>
+        <a class="btn primary" href="#">Aceptar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="preview-evento">
+  <div class="sheet">
+    <header><strong>Previsualización</strong><a class="close" href="#" aria-label="Cerrar">✕</a></header>
+    <div class="body"><p>Vista previa del evento (maqueta).</p>
+      <div class="actions">
+        <a class="btn" href="#">Cancelar</a>
+        <a class="btn primary" href="#">Aceptar</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section></main></div></body></html>
